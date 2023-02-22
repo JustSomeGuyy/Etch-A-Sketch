@@ -10,11 +10,25 @@
     <h1 class="header">Etch-A-Sketch</h1>
     <div class="menu">
         <div class="inline">
+            <label for="gridSize">Pick your size of grid: </label>
+            <select name="gridSize" id="grid-size">
+                <option value="18px">18 x 18</option>
+                <option value="32px">32 x 32</option>
+                <option value="64px">64 x 64</option>
+                <option value="128px">128 x 128</option>
+            </select>
             <label for="colorPicker">Pick your Color</label>
             <input type="color" name="colorPicker" id="colorChoice">
+            <button>Clear</button>
         </div>
-        
+    </div>
+    <div class="main">
+        <div id="grid">
+        </div>
+    </div>
 
+    <div class="footer">
+        <h3>Copyright 2023 by Tyler W Wolfe <a href="https://github.com/JustSomeGuyy"><img src="images/github-mark.png" alt="GitHub logo that is also the link to Tyler's GitHub account"></a></h3>
     </div>
 </body>
 </html>
