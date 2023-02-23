@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Etch-A-Sketch</title>
 </head>
 <body>
     <h1 class="header">Etch-A-Sketch</h1>
     <div class="menu">
         <div class="inline">
-            <label for="gridSize">Pick your size of grid: </label>
+            <label for="gridSize">Pick your canvas size: </label>
             <select name="gridSize" id="grid-size">
-                <option value="18px">18 x 18</option>
-                <option value="32px">32 x 32</option>
-                <option value="64px">64 x 64</option>
-                <option value="128px">128 x 128</option>
+                <option value="18px" id="18">18 x 18</option>
+                <option value="32px" id="32">32 x 32</option>
+                <option value="64px" id="64">64 x 64</option>
+                <option value="128px" id="128">128 x 128</option>
             </select>
             <label for="colorPicker">Pick your Color</label>
             <input type="color" name="colorPicker" id="colorChoice">
@@ -30,5 +31,6 @@
     <div class="footer">
         <h3>Copyright 2023 by Tyler W Wolfe <a href="https://github.com/JustSomeGuyy"><img src="images/github-mark.png" alt="GitHub logo that is also the link to Tyler's GitHub account"></a></h3>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
