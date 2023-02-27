@@ -1,24 +1,27 @@
-const option = document.querySelectorAll('option');
-const gridDisplay = document.querySelector('#grid');
+const container = document.querySelector("#container");
+let cellSize = 20;
+let gridSize = 16;
+let cells = [];
 
-console.log()
-const grid = [];
+function createGrid(gridSize) {
+  container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+  container.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
 
-// Creates the grid blocks
-function getGrid() {
-    const select = document.querySelector('select');
-    const options = select.options;
-    const id = options[options.selectedIndex].id;
-    switch(id){
-        case 18:
-            for(let i = 0; i <= 36; i++){
-                grid.push(i);
-                for(let j = 0; j <= grid.length; j++){
-                    let x = document.createElement('div');
-                    x.classList.add('canvas');
-                    x.appendChild(gridDisplay);
-                }
-            }
-            break;
-    }
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    let cell = document.createElement("div");
+    cell.classList.add("cell");
+    cell.addEventListener("mouseover", changeColor);
+    cells.push(cell);
+    container.appendChild(cell);
+  }
 }
+
+function changeColor() {
+  this.style.backgroundColor = "black";
+}
+
+function clearGrid() {
+  cells.forEach(cell => cell.style.backgroundColor = "white");
+}
+
+createGrid(gridSize);

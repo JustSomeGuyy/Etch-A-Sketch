@@ -1,18 +1,22 @@
 html {
-    background-color: darkgray;
+    background-color: #212529;
+    font-size: 1rem;
 }
 
-#grid {
-    margin: 0 auto;
-    width: 50rem;
-    height: 50rem;
-    background-color: black;
+.footer img{
+    height: 20px;
+}
+
+#container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.canvas {
-    background-color: white;
-    width: auto;
     height: auto;
-}
+    width: 394px;
+  }
+  
+  .cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+  }
+  
